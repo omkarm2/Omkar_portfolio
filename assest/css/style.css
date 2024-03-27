@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+/* .root{
+        --color-body: #b6cbce;
+        --color-heading: #eef3db;
+        --color-base: #033f47;
+        --color-base2: #0c6b7a;   
+        --color-brand: #e0f780;
+        --color-brand2: #deff58; 
+        --sidbar-width: 240px; 
+        --font-base: "Bai Jamjuree";
+
+
+        dark blue - #181D50
+        med blue - #1746A2
+        light blue - #5F9DF7
+        ORANGE - #ff8f49
+        CREAME - #FFF7E9
+} */
+
+body {
+    background-color: #181D50;
+    color: #ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #dbf3f3;
+    font-weight: 700;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #b6cbce;
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: #f7be80;
+}
+
+img {
+    width: 100%;
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.text-brand {
+    color: #ff8f49;
+}
+
+/* navbar */
+.navbar {
+    background-color: #1746A2;
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar .nav-link.active {
+    color: #fd8b00;
+}
+
+/* button */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: #ff873d;
+    border-color:  #1746A2;
+    color: #ffffff;
+}
+
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color:  #5F9DF7;
+    color:  #1746A2;
+    border-color:  #FFF7E9;
+}
+
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #FFF7E9;
+    position: absolute;
+    left: 0%;
+    top: 110%;
+    transition: all 0.5s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* SERVICES */
+.bg-base {
+    background-color: #1746A2;
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 #5F9DF7;
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color:  #FFF7E9;
+    color: #000000;
+}
+
+.container {
+    display: flex;
+}
+
+
+
+
+@media (min-width : 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: 300px;
+        background: linear-gradient(rgba(3, 63, 71, 0.7), rgba(3, 63, 71, 0.7)), url(../images/backg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 7px solid #5adbf5;
+    }
+
+    #content-wrapper {
+        padding-left: 300px;
+    }
+
+}
+
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img{
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img{
+    transform: scale(1.1);
+}
+
+
+/* contact */
+
+#contact .form-control{
+    background-color: #1746A2 ;
+    border-color:#181D50;
+    color: #ffffff;
+}
+
+
+#contact .form-control:focus{
+    border-color: #5F9DF7 ;
+    box-shadow: none;
+}
+
+
+#contact .form-control::placeholder{
+    color:#dbf3f3;
+}
+
+#contact input.form-control{
+    height: 44px;
+}
+
+
+.social-links a{
+    width:40px ;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #1746A2;
+    border-radius: 100px;
+    font-size: 25px;
+}
+
+
+/* SKILLSS */
+.contain{
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);  
+    justify-content: center;   
+    align-items: center;    
+    text-align: center;    
+    grid-gap: 1rem;    
+    padding: 1rem 80px;    
+    font-size: 1.2rem;   
+}
+
+.skill-box{
+    padding: 1rem;    
+    color: #ddd;   
+    cursor: pointer;
+}
+
+.skill-title{   
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
+    padding: 0.5rem;    
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+    width: 35px;
+}
+
+.skill-box:hover .img{
+    transform: translateY(-10px);
+}
+
+.skill-title:after{
+    content: '';  
+    position: absolute;   
+    bottom: 0;    
+    right: 50%;    
+    width: 0;    
+    height: 4px;    
+    border-radius: 2px 0 0 2px;   
+    background-color: #ff8f49;
+    transition: 0.5s;
+}
+    
+.skill-title:before{    
+    content: '';    
+    position: absolute;    
+    bottom: 0;    
+    left: 50%;    
+    width: 0;    
+    height: 4px;    
+    border-radius: 0 2px 2px 0;    
+    background-color: #ff8f49;
+    transition: 0.5s;
+}
+
+.img{
+    width: 90px;
+    height:90px;
+    position: relative;
+    border-radius:45px ;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.skill-icon{   
+    width: 50px;
+}
+
+.skill-title h3{
+    color: #fff;
+    margin: 00.5rem;
+}
+
+
