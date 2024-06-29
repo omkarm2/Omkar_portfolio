@@ -153,6 +153,9 @@ img {
     display: flex;
 }
 
+p{
+    text-align: justify;
+}
 
 
 
